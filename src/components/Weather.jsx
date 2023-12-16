@@ -79,6 +79,7 @@ const Weather = () => {
     console.log(favorites);
   };
 
+  //2nd part
   return (
     <div className='center'>
       <br/>
