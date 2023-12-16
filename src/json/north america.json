@@ -1,0 +1,28 @@
+{
+    "countries": [
+      {"name": "Antigua and Barbuda", "abbreviation": "AG"},
+      {"name": "Bahamas", "abbreviation": "BS"},
+      {"name": "Barbados", "abbreviation": "BB"},
+      {"name": "Belize", "abbreviation": "BZ"},
+      {"name": "Canada", "abbreviation": "CA"},
+      {"name": "Costa Rica", "abbreviation": "CR"},
+      {"name": "Cuba", "abbreviation": "CU"},
+      {"name": "Dominica", "abbreviation": "DM"},
+      {"name": "Dominican Republic", "abbreviation": "DO"},
+      {"name": "El Salvador", "abbreviation": "SV"},
+      {"name": "Grenada", "abbreviation": "GD"},
+      {"name": "Guatemala", "abbreviation": "GT"},
+      {"name": "Haiti", "abbreviation": "HT"},
+      {"name": "Honduras", "abbreviation": "HN"},
+      {"name": "Jamaica", "abbreviation": "JM"},
+      {"name": "Mexico", "abbreviation": "MX"},
+      {"name": "Nicaragua", "abbreviation": "NI"},
+      {"name": "Panama", "abbreviation": "PA"},
+      {"name": "Saint Kitts and Nevis", "abbreviation": "KN"},
+      {"name": "Saint Lucia", "abbreviation": "LC"},
+      {"name": "Saint Vincent and the Grenadines", "abbreviation": "VC"},
+      {"name": "Trinidad and Tobago", "abbreviation": "TT"},
+      {"name": "United States", "abbreviation": "US"}
+    ]
+  }
+  

@@ -1,0 +1,17 @@
+{
+    "countries": [
+      {"name": "Argentina", "abbreviation": "AR"},
+      {"name": "Bolivia", "abbreviation": "BO"},
+      {"name": "Brazil", "abbreviation": "BR"},
+      {"name": "Chile", "abbreviation": "CL"},
+      {"name": "Colombia", "abbreviation": "CO"},
+      {"name": "Ecuador", "abbreviation": "EC"},
+      {"name": "Guyana", "abbreviation": "GY"},
+      {"name": "Paraguay", "abbreviation": "PY"},
+      {"name": "Peru", "abbreviation": "PE"},
+      {"name": "Suriname", "abbreviation": "SR"},
+      {"name": "Uruguay", "abbreviation": "UY"},
+      {"name": "Venezuela", "abbreviation": "VE"}
+    ]
+  }
+  

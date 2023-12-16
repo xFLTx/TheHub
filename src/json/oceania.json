@@ -1,0 +1,19 @@
+{
+    "countries": [
+      {"name": "Australia", "abbreviation": "AU"},
+      {"name": "Fiji", "abbreviation": "FJ"},
+      {"name": "Kiribati", "abbreviation": "KI"},
+      {"name": "Marshall Islands", "abbreviation": "MH"},
+      {"name": "Micronesia", "abbreviation": "FM"},
+      {"name": "Nauru", "abbreviation": "NR"},
+      {"name": "New Zealand", "abbreviation": "NZ"},
+      {"name": "Palau", "abbreviation": "PW"},
+      {"name": "Papua New Guinea", "abbreviation": "PG"},
+      {"name": "Samoa", "abbreviation": "WS"},
+      {"name": "Solomon Islands", "abbreviation": "SB"},
+      {"name": "Tonga", "abbreviation": "TO"},
+      {"name": "Tuvalu", "abbreviation": "TV"},
+      {"name": "Vanuatu", "abbreviation": "VU"}
+    ]
+  }
+  
