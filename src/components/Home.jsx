@@ -5,19 +5,18 @@ const Home = () => {
 
   // Function to fetch a random quote from the Quotable API
   const fetchQuote = () => {
-    fetch('https://api.quotable.io/random?')
+    fetch('https://api.quotable.io/random')
       .then((response) => response.json())
       .then((data) => {
-        // Update the state 
         setQuoteData({ content: data.content, author: data.author });
       })
       .catch((error) => console.log(error));
   };
 
-  // Fetch a quote when 
+  // Fetch a quote
   useEffect(() => {
     fetchQuote();
-  }, []); //empty array to prevent infinite loop
+  }, []); 
 
   //Adding the quote to favorites in local storage
   const addToFavoriteQuotes = () => {
@@ -26,6 +25,7 @@ const Home = () => {
       content: quoteData.content,
       author: quoteData.author,
     };
+
 
     // Check if the quote is already in favorites
     if (favoriteQuotes.some((favorite) => favorite.content === newFavorite.content && favorite.author === newFavorite.author)) {
@@ -51,6 +51,7 @@ const Home = () => {
       </button> <button title='You liked it?' onClick={addToFavoriteQuotes}className='button-spin'><img src="public/star.png" height={30} width={30}/></button>
       <br />
       <br />
+      <p>News data provided by NewsAPI.org</p>
       <p>Weather data provided by OpenWeather</p>
       <p>Quotes are from quotable.io</p>
       <p className="disclaimer">Made by: Ian Michael Brandt</p>

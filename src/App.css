@@ -1,25 +1,29 @@
 /* App.css */
-/* this app background will cover the entirety of the screen despite being on a div container*/
+
+/* app background */
 .app-background {
-  background: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/0517069a-c48b-4e13-88d2-4ffe78adb8a1/d66882b-bc7e81d4-7ecb-42f6-9f83-0f0be0f761f8.png') center/cover;
+  background: repeating-linear-gradient(
+    45deg,
+    #1a1a1a,
+    #1a1a1a 10px,
+    #111 10px,
+    #111 20px
+  );
   position: absolute;
+  min-height: 100%;
   width: 100%;
-  height: 100%;
   top: 0;
-  /*align all text to top center*/
+  left: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /*font-family: 'Roboto', sans-serif;*/
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  font-size: 1.5rem;
-  color: #fff;
-  text-shadow: 2px 2px 4px #000000;
+  font-size: 1;
 }
 
-/*button with a round border*/
+/* button with a round border */
 .nav-button {
   border-radius: 50px;
   border: 1px solid transparent;
@@ -30,32 +34,32 @@
   transition: border-color 0.25s;
 }
 
-/*Style for title*/
+/* Style for title */
 .tittle {
   font-size: 3em;
   line-height: 1.1;
-  /*color purple*/
+  /* color purple */
   color: #646cff;
-  /*text shadow*/
+  /* text shadow */
   text-shadow: 2px 2px 4px #000000;
 }
 
-/*center text*/
+/* center text */
 .right {
   text-align: right;
 }
 
-/*center text*/
+/* center text */
 .center {
   text-align: center;
 }
 
-/*left text*/
+/* left text */
 .left {
   text-align: left;
 }
 
-/*--------------------------------*/
+/* -------------------------------- */
 /* Style for the button to clear favorites, center of screen at the bottom */
 .clear-favorites {
   position: fixed;
@@ -63,35 +67,36 @@
   left: 50%;
   transform: translateX(-50%);
   margin-bottom: 1em;
-  background-color: #ff0000; 
-  color: white; 
+  background-color: #ff0000;
+  color: white;
   border: none;
   border-radius: 5px;
 }
 
-/*Same as above but not fixed at the bottom*/
+/* Same as above but not fixed at the bottom and centralized */
 .clear-favorites2 {
-  background-color: #ff0000; 
-  color: white; 
+  background-color: #ff0000;
+  color: white;
   border: none;
-  border-radius: 5px;
+  transform: translateX(50%);
 }
-/*-------------------------------------*/
 
-/*Style to align buttons to the rightmost part of the screen*/
+/* ------------------------------------- */
+
+/* Style to align buttons to the rightmost part of the screen */
 .right-align {
   position: fixed;
   right: 0;
   margin-right: 1em;
 }
 
-/*disclaimer font small and thin*/
+/* disclaimer font small and thin */
 .disclaimer {
   font-size: 0.5em;
   font-weight: 300;
 }
 
-/*standard drop down size*/
+/* standard drop-down size */
 .dropdown {
   width: 75%;
   height: 75%;
@@ -99,10 +104,11 @@
   font-size: 0.8em;
   font-weight: 500;
   transition: border-color 0.25s;
+  
 }
 
-/*Standard sizing for text input*/
-.txt-input{
+/* Standard sizing for text input */
+.txt-input {
   width: 70%;
   height: 80%;
   padding: 0.6em 1.2em;
@@ -111,38 +117,73 @@
   transition: border-color 0.25s;
 }
 
-/*Remove the dark default background for buttons*/
+/* Remove the dark default background for buttons */
 .btn-transparent {
   background-color: transparent;
 }
 
-/*sub-title smaller bold font for title of city weather search*/
+/* sub-title smaller bold font for title of city weather search */
 .sub-title {
   font-size: 1.2em;
   font-weight: 500;
 }
 
-/*style for quotes text Italic*/
-.quote-txt{
+/* style for quotes text Italic */
+.quote-txt {
   font-style: italic;
   font-size: 1.2em;
 }
 
-/*style for quote author*/
-.quote-author{
+/* style for quote author */
+.quote-author {
   font-style: italic;
   font-size: 0.8em;
 }
-/*spinning button*/
+
+/* spinning button */
 .button-spin {
   transition: transform 0.5s;
   background-color: transparent;
 }
 
 .button-spin:hover {
-  transform: rotate(360deg); 
+  transform: rotate(360deg);
 }
-/*--------*/
 
+/* Style for the button within the search-container */
+.search-container button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
 
+/* Center the input and button horizontally within the search-container */
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Style for the input field */
+.txt-input {
+  width: 70%;
+  height: 80%;
+  padding: 0.6em 1.2em;
+  font-size: 0.8em;
+  font-weight: 500;
+  transition: border-color 0.25s;
+}
+
+/* Style for the button image */
+.search-container button img {
+  height: 22px;
+  width: 22px;
+  alt: "Search";
+}
+
+/*logo*/
+.logo {
+  height: 200px;
+  width: 200px;
+  alt: "logo";
+}
 

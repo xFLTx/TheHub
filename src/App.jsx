@@ -67,7 +67,7 @@ const SubNavigation = () => {
 function App() {
   return (
     <div className="app-background">
-      <h1 className="title">The Hub</h1>
+    <img  src="public/thehub.png" alt="The Hub Logo" className="logo" />
       <nav>
         <Link to="/" className="nav-button">
           Home
