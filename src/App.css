@@ -55,6 +55,7 @@
   text-align: left;
 }
 
+/*--------------------------------*/
 /* Style for the button to clear favorites, center of screen at the bottom */
 .clear-favorites {
   position: fixed;
@@ -67,6 +68,15 @@
   border: none;
   border-radius: 5px;
 }
+
+/*Same as above but not fixed at the bottom*/
+.clear-favorites2 {
+  background-color: #ff0000; 
+  color: white; 
+  border: none;
+  border-radius: 5px;
+}
+/*-------------------------------------*/
 
 /*Style to align buttons to the rightmost part of the screen*/
 .right-align {
@@ -83,8 +93,8 @@
 
 /*standard drop down size*/
 .dropdown {
-  width: 80%;
-  height: 80%;
+  width: 75%;
+  height: 75%;
   padding: 0.6em 1.2em;
   font-size: 0.8em;
   font-weight: 500;
@@ -105,4 +115,34 @@
 .btn-transparent {
   background-color: transparent;
 }
+
+/*sub-title smaller bold font for title of city weather search*/
+.sub-title {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+/*style for quotes text Italic*/
+.quote-txt{
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+/*style for quote author*/
+.quote-author{
+  font-style: italic;
+  font-size: 0.8em;
+}
+/*spinning button*/
+.button-spin {
+  transition: transform 0.5s;
+  background-color: transparent;
+}
+
+.button-spin:hover {
+  transform: rotate(360deg); 
+}
+/*--------*/
+
+
 

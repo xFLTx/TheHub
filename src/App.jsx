@@ -1,47 +1,97 @@
+import { Routes, Route, Link, useLocation } from 'react-router-dom';
+
 import Home from './components/Home';
-import Weather from './components/Weather';  
-import Favorites from './components/Favorites';
+import FavoritesQuotes from './components/FavoriteQuotes';
+import Weather from './components/Weather';
+import FavoriteCities from './components/FavoriteCities';
+import News from './components/News';
+import Settings from './components/Settings';
 import './App.css';
 
-//router import
-import {Routes, Route, Link} from 'react-router-dom';
-
-const PageHome = () => {
-  return (
-   <div>
+const PageHome = () => (
+  <div>
     <Home />
-   </div>
-  );
-};
+  </div>
+);
 
-const PageWeather = () => {
+const PageFavoritesQuotes = () => (
+  <div>
+    <FavoritesQuotes />
+  </div>
+);
+
+const PageNews = () => (
+  <div>
+    <News />
+  </div>
+);
+
+const PageWeather = () => (
+  <div>
+    <Weather />
+  </div>
+);
+
+const PageFavoriteCities = () => (
+  <div>
+    <FavoriteCities />
+  </div>
+);
+
+const PageSettings = () => (
+  <div>
+    <Settings />
+  </div>
+);
+
+const SubNavigation = () => {
+  const location = useLocation();
+
   return (
-    <div>
-      <Weather />
-    </div>
-  );
-};
-const PageFavorites = () => {
-  return (
-    <div>
-      <Favorites />
+    <div className="sub-navigation">
+      <br />
+      {location.pathname === '/' && (
+        <Link to="/favoritesquotes" className="nav-button">
+          Favorites Quotes
+        </Link>
+      )}
+      {location.pathname === '/weather' && (
+        <Link to="/favoritecities" className="nav-button">
+          Favorite Cities
+        </Link>
+      )}
     </div>
   );
 };
 
 function App() {
   return (
-    <div className = "app-background" >
-      <h1 className='tittle'>Weather Research API + REACT</h1>
+    <div className="app-background">
+      <h1 className="title">The Hub</h1>
       <nav>
-        <Link to="/" className = "nav-button">Home </Link>
-        <Link to="/weather" className = "nav-button">Weather </Link>
-        <Link to="/favorites"className = "nav-button">Favorites</Link>
+        <Link to="/" className="nav-button">
+          Home
+        </Link>
+        <Link to="/news" className="nav-button">
+          News
+        </Link>
+        <Link to="/weather" className="nav-button">
+          Weather
+        </Link>
+        <Link to="/settings" className="nav-button">
+          Settings
+        </Link>
       </nav>
+
+      <SubNavigation />
+
       <Routes>
         <Route path="/" element={<PageHome />} />
+        <Route path="/favoritesquotes" element={<PageFavoritesQuotes />} />
+        <Route path="/news" element={<PageNews />} />
         <Route path="/weather" element={<PageWeather />} />
-        <Route path="/favorites" element={<PageFavorites />} />
+        <Route path="/favoritecities" element={<PageFavoriteCities />} />
+        <Route path="/settings" element={<PageSettings />} />
       </Routes>
     </div>
   );

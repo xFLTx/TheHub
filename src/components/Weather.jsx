@@ -38,12 +38,8 @@ const Weather = () => {
         data.main.temp = parseInt(data.main.temp - 273.15).toFixed(2);
         data.main.temp_min = parseInt(data.main.temp_min - 273.15).toFixed(2);
         data.main.temp_max = parseInt(data.main.temp_max - 273.15).toFixed(2);
-        //round it to the nearest integer
 
         setWeatherData(data);
-
-        ///console print the JSON data received from the API
-        console.log(data);
 
       }
     } catch (error) {
@@ -60,11 +56,13 @@ const Weather = () => {
     const newFavorite = {
       name: weatherData.name,
       country: weatherData.sys.country,
-      temperature: weatherData.main.temp,
+      ///set the temperature to the nearest integer
+      temperature: Math.round(weatherData.main.temp),
       weather: weatherData.weather[0].description,
       minTemperature: weatherData.main.temp_min,
       maxTemperature: weatherData.main.temp_max,
       windSpeed: weatherData.wind.speed,
+      icon: weatherData.weather[0].icon,
     };
 
     ///check if the city is already in favorites
@@ -116,6 +114,8 @@ const Weather = () => {
         value={city}
         onChange={(e) => setCity(e.target.value)} className = "txt-input"
       />
+      <br />
+      <br />
 
        {/* Add to favorites button */}
        {weatherData && (
@@ -131,12 +131,14 @@ const Weather = () => {
       {/* Display weather data */}
       {weatherData && (
         <div>
-          <h2>{weatherData.name}, {weatherData.sys.country}</h2>
-          <p className = "center">Temperature: {weatherData.main.temp} °C</p>
-          <p>Weather: {weatherData.weather[0].description}</p>
-          <p>Min Temperature: {weatherData.main.temp_min} °C</p>
-          <p>Max Temperature: {weatherData.main.temp_max} °C</p>
+          <h2 className = "sub-title">{weatherData.name}, {weatherData.sys.country}</h2>
+          <p className = "center">Temperature: {weatherData.main.temp} °C - Weather: {weatherData.weather[0].description}
+          {/*img for the weather description*/}
+          <img className="h-32 w-32 fill-current" src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}alt="" height={40} width={40}/></p>
+          <p>Min Temperature: {weatherData.main.temp_min} °C - Max Temperature: {weatherData.main.temp_max} °C</p>
           <p>Wind Speed: {weatherData.wind.speed} m/s</p>
+
+    
         </div>
       )}
     </div>
